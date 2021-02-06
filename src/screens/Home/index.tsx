@@ -1,13 +1,18 @@
-import React from 'react';
-
-import { Text } from 'react-native';
-
-import { Container } from './styles';
+import { useNavigation } from "@react-navigation/native";
+import React from "react";
+import { Button } from "../../components";
+import { Container, Title, Subtitle } from "./styles";
 
 const Home: React.FC = () => {
+  const { navigate } = useNavigation();
+
   return (
     <Container>
-      <Text>Home</Text>
+      <Title>Seja bem vinda(o)</Title>
+
+      <Button onPress={() => navigate("Profile")}>Navegar para Profile</Button>
+
+      <Subtitle>Aprovei bastante nosso conteúdos</Subtitle>
     </Container>
   );
 };
