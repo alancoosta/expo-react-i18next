@@ -28,6 +28,10 @@ const Profile: React.FC = () => {
       <Button onPress={() => handleChangeLocale("en-US")}>
         {t("Profile:button_locale.english")}
       </Button>
+
+      <Button onPress={() => handleChangeLocale("es-ES")}>
+        {t("Home:button_locale.spanish")}
+      </Button>
     </Container>
   );
 };

@@ -9,6 +9,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { StatusBar } from "expo-status-bar";
 
 import AppProvider from "./hooks";
+import Routes from "./routes";
 
 import { Home, Profile } from "./screens";
 
@@ -29,14 +30,16 @@ const App: React.FC = () => {
         <AppProvider>
           <StatusBar style="light" backgroundColor="transparent" translucent />
 
-          <App.Navigator
+          <Routes />
+
+          {/* <App.Navigator
             screenOptions={{
               headerShown: false,
             }}
           >
             <App.Screen name="Home" component={Home} />
             <App.Screen name="Profile" component={Profile} />
-          </App.Navigator>
+          </App.Navigator> */}
         </AppProvider>
       </Suspense>
     </NavigationContainer>
