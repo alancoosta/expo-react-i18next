@@ -1,0 +1,12 @@
+{
+  "name": "intl",
+  "displayName": "intl",
+  "expo": {
+    "name": "intl",
+    "slug": "intl",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
