@@ -6,19 +6,17 @@ export const Container = styled.View`
   align-items: center;
   justify-content: center;
 
-  background-color: #000;
+  background-color: #c3c3c3;
 `;
 
 export const Title = styled.Text`
-  color: #fff;
-  font-size: 18px;
+  color: #000;
+  font-size: 28px;
 
   margin-bottom: 20px;
 `;
 
 export const Subtitle = styled.Text`
-  color: #fff;
-  font-size: 14px;
-
-  margin-top: 20px;
+  color: #000;
+  font-size: 20px;
 `;

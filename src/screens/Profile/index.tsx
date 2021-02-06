@@ -1,18 +1,33 @@
-import { useNavigation } from "@react-navigation/native";
 import React from "react";
+
+import { useNavigation } from "@react-navigation/native";
+import { useTranslation } from "react-i18next";
+
+import { useAppLocale } from "../../hooks/locale";
 import { Button } from "../../components";
+
 import { Container, Title, Subtitle } from "./styles";
 
 const Profile: React.FC = () => {
-  const { navigate } = useNavigation();
+  const { t } = useTranslation(["Profile"]);
+  const { goBack } = useNavigation();
+  const { handleChangeLocale } = useAppLocale();
 
   return (
     <Container>
-      <Title>Seja bem vinda(o)</Title>
+      <Title>{t("Profile:title")}</Title>
 
-      <Button onPress={() => navigate("Home")}>Navegar para Home</Button>
+      <Button onPress={() => goBack()}>{t("Profile:button_text")}</Button>
 
-      <Subtitle>Aprovei bastante nosso conteúdos</Subtitle>
+      <Subtitle>{t("Profile:subtitle")}</Subtitle>
+
+      <Button onPress={() => handleChangeLocale("pt-BR")}>
+        {t("Profile:button_locale.portuguese")}
+      </Button>
+
+      <Button onPress={() => handleChangeLocale("en-US")}>
+        {t("Profile:button_locale.english")}
+      </Button>
     </Container>
   );
 };

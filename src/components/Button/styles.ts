@@ -7,12 +7,14 @@ export const Container = styled.TouchableOpacity`
 
   border-radius: 8px;
   overflow: hidden;
+
+  margin: 8px 0;
 `;
 
 export const ButtonGradient = styled(LinearGradient).attrs({
   colors: ["#7300da", "#39adcc"],
-  start: { x: 0, y: 0.5 },
-  end: { x: 0, y: 1 },
+  start: { x: 0, y: 0 },
+  end: { x: 1, y: 0 },
 })`
   flex: 1;
 
